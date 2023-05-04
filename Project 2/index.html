@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<head> 
+    <title>Script Calc</title>
+  <script src="script.js"></script>
+  <style>
+    /* Container for the stopwatch */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  /* Heading styles */
+  h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+    text-transform: uppercase;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #777;
+  }
+  
+  /* Stopwatch digits */
+  p {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px 40px;
+    margin-bottom: 20px;
+    animation: pulse 1s ease-in-out infinite;
+  }
+  
+  /* Animation keyframes for the button*/
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
+    50% {
+      transform: scale(1.05);
+      box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
+  }
+  
+  /* Button styles */
+  button {
+    background-color: #8b0000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  /* Button hover effect */
+  button:hover {
+    background-color: #1c0000;
+  }
+  
+  /* Button active effect */
+  button:active {
+    transform: translateY(2px);
+  }
+  
+
+
+/* Define the star-like shapes */
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0px 0px 1px 1px #fff;
+}
+
+/* Define the star animation */
+@keyframes star-flicker {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Apply animation to all star shapes */
+.star {
+  animation: star-flicker 2s ease-in-out infinite;
+}
+/* body styles */
+  body {
+    background-color: black;
+  }
+
+ /* moon styles */
+  body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000;
+}
+
+.moon {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  border-radius: 50%;
+  position: relative;
+  animation: moon-rotate 2s linear infinite;
+  box-shadow: 0 0 20px 10px #fd3128, 0 0 40px 20px #fd3128, 0 0 60px 30px #fd3128, 0 0 80px 40px black;
+}
+
+.moon::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+@keyframes moon-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* media only styles */
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  p {
+    font-size: 5rem;
+    padding: 10px 20px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .moon {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .star {
+    margin: 10px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  button {
+    width: 120px;
+    font-size: 1rem;
+  }
+}
+
+ </style>
+</head>
+<div class="wrapper">
+    <h1>Stopwatch</h1>
+    <h2>Yoryie Munoz</h2>
+    <p><span id="seconds">00</span>:<span id="tens">00</span></p>
+    <button id="button-start">Start</button>
+    <button id="button-stop">Stop</button>
+    <button id="button-reset">Reset</button>
+    </div> 
+    <div class="moon"></div>
+    <div class="star" style="top: 50px; left: 100px;"></div>
+    <div class="star" style="top: 150px; left: 250px;"></div>
+    <div class="star" style="top: 200px; left: 500px;"></div>
+    <div class="star" style="top: 250px; left: 600px;"></div>
+    <div class="star" style="top: 300px; left: 600px;"></div>
+    <div class="star" style="top: 300px; left: 650px;"></div>
+    <div class="star" style="top: 50px; left: 100px;"></div>
+    <div class="star" style="top: 150px; left: 250px;"></div>
+    <div class="star" style="top: 200px; left: 500px;"></div>
+    <div class="star" style="top: 350px; left: 700px;"></div>
+    <div class="star" style="top: 400px; left: 900px;"></div>
+    <div class="star" style="top: 500px; left: 1100px;"></div>
+    <div class="star" style="top: 250px; left: 400px;"></div>
+    <div class="star" style="top: 350px; left: 600px;"></div>
+    <div class="star" style="top: 450px; left: 800px;"></div>
+    <div class="star" style="top: 550px; left: 1000px;"></div>
+    <div class="star" style="top: 650px; left: 1200px;"></div>
+    <div class="star" style="top: 750px; left: 1400px;"></div>
+    <div class="star" style="top: 850px; left: 1600px;"></div>
+    <div class="star" style="top: 250px; left: 400px;"></div>
+    <div class="star" style="top: 350px; left: 600px;"></div>
+    <div class="star" style="top: 450px; left: 800px;"></div>
+    <div class="star" style="top: 550px; left: 1000px;"></div>
+   
+</html>
+    
+    
+    
+    
+    
