@@ -1,0 +1,169 @@
+body {
+  background-color: #222;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+}
+
+main {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  animation: bounceInDown 1s;
+}
+
+@keyframes bounceInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-1000px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  80% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#word {
+  font-size: 38px;
+  margin-bottom: 20px;
+  animation: fadeIn 1s;
+  color: purple;
+ 
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#guesses {
+  text-align: center;
+  font-size: 16pt;
+  color: rgb(255, 255, 153);
+  font-weight: bold;
+  font-family: "Courier New", Courier, monospace
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-1000px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#gallows {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+#hangmanImage {
+  animation: bounceInRight 1s;
+}
+
+@keyframes bounceInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(1000px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(-30px);
+  }
+  80% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#controls {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  animation: slideInUp 1s;
+}
+
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(1000px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.button {
+  background-color: purple;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 18px;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.button:hover {
+  background-color: plum;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 3px;
+  border: none;
+  margin-right: 10px;
+}
+
+#guessBox {
+  width: 200px;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 36px;
+  }
+  
+  #word {
+    font-size: 24px;
+  }
+  
+  #guesses {
+    font-size: 18px;
+  }
+}
+
+.guess {
+  padding: 30px;
+  display: inline-block;
+  border: 2px solid rgb(255, 255, 153);
+  border-radius: 10px;
+  margin: 10px;
+  cursor: pointer;
+}
