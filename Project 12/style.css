@@ -1,0 +1,119 @@
+body {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: grey;
+  }
+  
+  .panel {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .question-container {
+    margin: 10px;
+    padding: 5px;
+    width: 80vw;
+    height: 10vh;
+    background-color: purple;
+    font-size: x-large;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .result {
+    margin: 10px;
+    padding: 5px;
+    width: 80vw;
+    height: 10vh;
+    text-align: center;
+    font-size: 50px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .option-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+    padding: 5px;
+    width: 80vw;
+    height: 20vh;
+    background-color: #9eb1b3;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .option {
+    padding: 10px;
+    width: 15vw;
+    height: 10vh;
+    font-size: larger;
+    background-color: white;
+    border-radius: 25%;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .option:hover {
+    background-color: green;
+  }
+  
+  .navigation {
+    width: 80vw;
+    height: 10vh;
+    margin: 10px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #c7dddf;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .evaluate,
+  .next {
+    width: 30vw;
+    height: 8vh;
+    padding: 5px;
+    font-size: larger;
+  }
+  
+  .evaluate {
+    background-color: lightslategray;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .next {
+    color: white;
+    background-color: purple;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes buttonAnimation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .button-animation {
+    animation: buttonAnimation 0.5s ease-in-out;
+  }
+  
